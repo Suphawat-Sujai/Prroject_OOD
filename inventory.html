@@ -32,6 +32,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    
+
+  <!-- JavaScript -->
+  
+
   </head>
 
     <!-- =======================================================
@@ -53,7 +58,7 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="checkin.html">CHECK IN</a></li>
             <li><a href="checkout.html">CHECK OUT</a></li>
-            <li><a class="active" href="inventory.html">INVENTORY MANAGEMENT</a></li>
+            <li><a class="active" href="inventory.html">STOCK MANAGEMENT</a></li>
             <li><a href="editroom.html">ROOM MANAEGMENT </a></li>
             <li><a href="#">STAFF MANAGEMENT</a></li>
           </ul>
@@ -69,15 +74,15 @@
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>INVENTORY MANAGEMENT</h2>
+            <h2>STOCK MANAGEMENT</h2>
           </div>
 
           <div class="card gap-2 col-3 mt-1 btn-group">
             <div class="btn-group">
               <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">Fuction</button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Update information</a>
-                <a class="dropdown-item" href="#">Purchase order</a>
+                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" >Add information</a>
+                <a class="dropdown-item" >Purchase order</a>
               </div>
             </div>
           </div>
@@ -89,116 +94,238 @@
           </div>
 
           <br>
-        
-          <div class="card">
-            <div class="card-body">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="card">
+              <div class="card-body">
+    
+                <!-- Default Table -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount  </th>
+                        <th scope="col">Unit price</th>
+                        <th scope="col">Total price</th>
+                        <th scope="col">Note</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Soap</td>
+                      <td>50</td>
+                      <td>12</td>
+                      <td>600</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Liquid soap</td>
+                      <td>25</td>
+                      <td>35</td>
+                      <td>875</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Towel</td>
+                      <td>80</td>
+                      <td>30</td>
+                      <td>2400</td>
+                      <td>ต้องเปลี่ยนให้ลูกค้าทุกวัน</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Blanket</td>
+                      <td>250</td>
+                      <td>60</td>
+                      <td>15000</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Pillowcase</td>
+                      <td>30</td>
+                      <td>50</td>
+                      <td>1500</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>glass</td>
+                      <td>60</td>
+                      <td>20</td>
+                      <td>1200</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>Bottled water</td>
+                      <td>100</td>
+                      <td>10</td>
+                      <td>1000</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>pillow</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>2500</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>Dishware</td>
+                      <td>150</td>
+                      <td>20</td>
+                      <td>3000</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">10</th>
+                      <td>Spoon</td>
+                      <td>150</td>
+                      <td>10</td>
+                      <td>1500</td>
+                      <td>-</td>
+                      <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
+                      <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Default Table Example -->
+              </div>
+            </div>
+              
+            
+            
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
 
-              <!-- Default Table -->
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Amount  </th>
-                      <th scope="col">Unit price</th>
-                      <th scope="col">Total price</th>
-                      <th scope="col">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Soap</td>
-                    <td>50</td>
-                    <td>12</td>
-                    <td>600</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Liquid soap</td>
-                    <td>25</td>
-                    <td>35</td>
-                    <td>875</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Towel</td>
-                    <td>80</td>
-                    <td>30</td>
-                    <td>2400</td>
-                    <td>ต้องเปลี่ยนให้ลูกค้าทุกวัน</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Blanket</td>
-                    <td>250</td>
-                    <td>60</td>
-                    <td>15000</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Pillowcase</td>
-                    <td>30</td>
-                    <td>50</td>
-                    <td>1500</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>glass</td>
-                    <td>60</td>
-                    <td>20</td>
-                    <td>1200</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">7</th>
-                    <td>Bottled water</td>
-                    <td>100</td>
-                    <td>10</td>
-                    <td>1000</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">8</th>
-                    <td>pillow</td>
-                    <td>50</td>
-                    <td>50</td>
-                    <td>2500</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">9</th>
-                    <td>Dishware</td>
-                    <td>150</td>
-                    <td>20</td>
-                    <td>3000</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10</th>
-                    <td>Spoon</td>
-                    <td>150</td>
-                    <td>10</td>
-                    <td>1500</td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- End Default Table Example -->
+            
+
+
+          </form>
+        </div>
+   
+      </section>
+
+      <!-- Modal add -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add imformation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Amount:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Unit price:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Total price:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Add</button>
             </div>
           </div>
-
-
-          
-                    
-                  
-
         </div>
-      </section>
+      </div>
+
+      <!-- Modal edit -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Edit imformation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Amount:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Unit price:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Total price:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal delete -->
+      <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLabel">Delete imformation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Cancel</button>
+              <button type="button" class="btn btn-danger">confirm</button>
+            </div>
+        </div>
+      </div>
+
+      
       
     </main>
 
