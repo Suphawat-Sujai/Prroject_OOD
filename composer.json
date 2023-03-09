@@ -1,0 +1,22 @@
+{
+    "name": "legion/prroject_ood",
+    "autoload": {
+        "psr-4": {
+            "Legion\\PrrojectOod\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Suphawat Sujai",
+            "email": "suphawat_2544_196@hotmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "App\\" : "src/"
+        }
+
+    }
+}

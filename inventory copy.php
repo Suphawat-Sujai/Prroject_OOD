@@ -56,9 +56,11 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="checkin.html">CUSTOMER MANAGEMENT</a></li>
+            <li><a href="checkin.html">CHECK IN</a></li>
+            <li><a href="checkout.html">CHECK OUT</a></li>
             <li><a class="active" href="inventory.html">STOCK MANAGEMENT</a></li>
             <li><a href="editroom.html">ROOM MANAEGMENT </a></li>
+            <li><a href="#">STAFF MANAGEMENT</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
