@@ -7,11 +7,11 @@ class item extends Contaxt{
 
     public function getAllitem(){
         $sql ="
-        select * FROM items
+        SELECT * FROM item
         ";
 
         $stmt = $this->pdo->query($sql);
-        $data = $stmt->fetchAll();
+        $data = $stmt->fetchAll(); //ดึงข้อมูลออกมาเเสดง
         return $data;
     }
 }

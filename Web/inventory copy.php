@@ -1,3 +1,4 @@
+  <?php require $_SERVER['DOCUMENT_ROOT']."/vendor/autoload.php";?>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -107,12 +108,10 @@
                         <th scope="col">Amount  </th>
                         <th scope="col">Unit price</th>
                         <th scope="col">Total price</th>
-                        <th scope="col">Note</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col">Details</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <!-- <tbody>
                     <tr>
                       <th scope="row">1</th>
                       <td>Soap</td>
@@ -214,7 +213,7 @@
                       <td><button type="button" class="bi bi-pencil-fill fa-1x" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-whatever="@fat"></button></td>
                       <td><button type="button" class="bi bi-trash fa-1x" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-whatever="@fat"></button></td>
                     </tr>
-                  </tbody>
+                  </tbody> -->
                 </table>
                 <!-- End Default Table Example -->
               </div>

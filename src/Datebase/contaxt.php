@@ -3,7 +3,7 @@ namespace App\Database;
 
 use PDO;
 
-class Db {
+class contaxt {
 	private $host = "localhost";
 	private $user = "root";
 	private $password = "";

@@ -11,7 +11,9 @@
             "email": "suphawat_2544_196@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "claviska/simpleimage": "^2.5"
+    },
 
     "autoload": {
         "psr-4": {
